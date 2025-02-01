@@ -1,0 +1,47 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirwiredX S.O.S - Language Selection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to AirwiredX S.O.S</h1>
+        <h2>Be Prepared</h2>
+        <p>Select your language:</p>
+        <select id="languageSelect" onchange="setLanguage()">
+            <option value="en">English</option>
+            <option value="fr">Français (French)</option>
+            <option value="es">Español (Spanish)</option>
+            <option value="ar">العربية (Arabic)</option>
+            <option value="pt">Português (Portuguese)</option>
+            <option value="zh">中文 (Chinese - Simplified)</option>
+            <option value="hi">हिन्दी (Hindi)</option>
+            <option value="ru">Русский (Russian)</option>
+            <option value="de">Deutsch (German)</option>
+            <option value="yo">Yorùbá</option>
+            <option value="ha">Hausa</option>
+            <option value="ig">Igbo</option>
+            <option value="pcm">Nigerian Pidgin</option>
+        </select>
+        <button onclick="continueToApp()">Continue</button>
+    </div>
+
+    <script>
+        function setLanguage() {
+            var language = document.getElementById("languageSelect").value;
+            localStorage.setItem("selectedLanguage", language);
+        }
+
+        function continueToApp() {
+            window.location.href = "subscription.html";
+        }
+    </script>
+</body>
+</html>
+
+
